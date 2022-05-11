@@ -1,4 +1,4 @@
-package Exam.Pricing;
+package Pricing;
 
 enum DiscountType {PERCENTAGEDISCOUNT, ABSOLUTEDISCOUNT}
 
@@ -20,11 +20,11 @@ public class Sale {
     }
 
     public long getTotal() {
-        pricing.getTotal(this);
+        return pricing.getTotal(this);
     }
 
     public static ISalePricing createPricing(DiscountType discountType, double percentage, long discount, long threshold) {
-        if(discountType == PERCENTAGEDISCOUNT) {
+        if(discountType == DiscountType.PERCENTAGEDISCOUNT) {
             return new PercentageDiscountPricing(percentage);
         }
         return new AbsoluteDiscountPricing(discount, threshold);

@@ -1,12 +1,13 @@
-package Exam.Pricing;
+package Pricing;
 import java.util.List;
 import java.util.LinkedList;
 
-public class ComplexPricing implements ISalePricing{
+public abstract class ComplexPricing implements ISalePricing{
     private List<ISalePricing> pricings;
 
     public ComplexPricing(ISalePricing pricing) {
-        this.add(pricing);
+        pricings = new LinkedList<ISalePricing>();
+        add(pricing);
     }
 
     public void add(ISalePricing pricing) {

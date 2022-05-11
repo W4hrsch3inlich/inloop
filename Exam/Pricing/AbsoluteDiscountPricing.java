@@ -1,4 +1,4 @@
-package Exam.Pricing;
+package Pricing;
 
 public class AbsoluteDiscountPricing implements ISalePricing{
     private long discount;
@@ -9,11 +9,12 @@ public class AbsoluteDiscountPricing implements ISalePricing{
         this.threshold = threshold;
     }
 
-    @Override
     public long getTotal(Sale sale) {
+        /*
         if(sale.getPreDiscountTotal() < threshold) {
             throw new IllegalArgumentException("Catalog price is below the threshold.");
         }
+        */
         return Math.max(sale.getPreDiscountTotal() - discount, threshold);
     }
 }

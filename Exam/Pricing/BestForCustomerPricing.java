@@ -1,10 +1,8 @@
-package Exam.Pricing;
+package Pricing;
 
-import javax.swing.text.html.HTMLDocument.HTMLReader.IsindexAction;
-
-public class BestForCustomerPricing extends ComplexPricing{
+public class BestForCustomerPricing extends ComplexPricing {
     public BestForCustomerPricing(ISalePricing pricing) {
-        this.add(pricing);
+        super(pricing);
     }
 
     @Override

@@ -1,3 +1,5 @@
+package Pricing;
+
 public class SaleApp {
 	public static void main(String[] args) {
 		Sale sale1;

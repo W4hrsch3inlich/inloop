@@ -1,4 +1,4 @@
-package Exam.Pricing;
+package Pricing;
 
 public class PercentageDiscountPricing implements ISalePricing{
     private double percentage;
@@ -10,8 +10,7 @@ public class PercentageDiscountPricing implements ISalePricing{
         this.percentage = percentage;
     }
 
-    @Override
     public long getTotal(Sale sale) {
-        return sale.getPreDiscountTotal() * percentage / 100;
+        return sale.getPreDiscountTotal() * (1 - Double.valueOf(percentage).longValue() / 100);
     }
 }

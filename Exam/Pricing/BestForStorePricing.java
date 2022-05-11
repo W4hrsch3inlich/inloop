@@ -1,15 +1,15 @@
-package Exam.Pricing;
+package Pricing;
 
 public class BestForStorePricing extends ComplexPricing{
-    public BestForCustomerPricing(ISalePricing pricing) {
-        this.add(pricing);
+    public BestForStorePricing(ISalePricing pricing) {
+        super(pricing);
     }
 
     @Override
     public long getTotal(Sale sale) {
         long maxTotal = Long.MIN_VALUE;
         for(ISalePricing pricing : getPricings()) {
-            if(pricing.getTotal(sale) > minTotal) {
+            if(pricing.getTotal(sale) > maxTotal) {
                 maxTotal = pricing.getTotal(sale);
             }
         }
