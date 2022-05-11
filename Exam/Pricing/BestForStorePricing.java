@@ -1,5 +1,3 @@
-package Pricing;
-
 public class BestForStorePricing extends ComplexPricing{
     public BestForStorePricing(ISalePricing pricing) {
         super(pricing);

@@ -1,5 +1,3 @@
-package Pricing;
-
 enum DiscountType {PERCENTAGEDISCOUNT, ABSOLUTEDISCOUNT}
 
 public class Sale {

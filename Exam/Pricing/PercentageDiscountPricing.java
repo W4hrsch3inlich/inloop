@@ -1,5 +1,3 @@
-package Pricing;
-
 public class PercentageDiscountPricing implements ISalePricing{
     private double percentage;
 

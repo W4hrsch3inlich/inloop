@@ -1,4 +1,3 @@
-package Pricing;
 import java.util.List;
 import java.util.LinkedList;
 

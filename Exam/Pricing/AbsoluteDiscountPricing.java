@@ -1,5 +1,3 @@
-package Pricing;
-
 public class AbsoluteDiscountPricing implements ISalePricing{
     private long discount;
     private long threshold;
