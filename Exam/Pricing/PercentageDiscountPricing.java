@@ -9,6 +9,6 @@ public class PercentageDiscountPricing implements ISalePricing{
     }
 
     public long getTotal(Sale sale) {
-        return sale.getPreDiscountTotal() * (1 - Double.valueOf(percentage).longValue() / 100);
+        return Double.valueOf(sale.getPreDiscountTotal() * (1.0 - percentage / 100.0)).longValue();
     }
 }
